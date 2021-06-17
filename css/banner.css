@@ -26,13 +26,15 @@ body{
 .header-bar{
 	content: "";
 	position: absolute;
-	top:30px;
+	top:6px;
 	z-index: 1;	
 	width: 100%;
 }
-/*.header-bar .ul{
-	margin: 0px -20px;
-}*/
+.header-bar .ul{
+	display: flex;
+justify-content: space-between;
+align-items: center;
+}
 .search{
 	float: left;
 	width: 33.333%;
@@ -50,12 +52,14 @@ body{
 	border-color: black;
     padding: 3px 0px 3px 28px;
     outline: none;
+    height: 35px;
 }
+
 .search form i{
 	position: absolute;
 	content: "";
 	left: 8px;
-    top: 5px;
+    top: 10px;
 
 }
 .header-bar .logo{
@@ -173,18 +177,20 @@ line-height: normal;
 }
 
 .banner form{
-float: left;
+display: flex;
 width: 100%;
 font-family: 'Open Sans', sans-serif;
-text-align: center;
+justify-content: center;
 color: rgb(255, 255, 255);
 padding-bottom: 70px;
 }
 .banner form .search-icon{
 		display: inline-block;
-	width: 25%;
+	width: 24%;
 	position: relative;
+	padding: 0px 5px;
 }
+
 .banner form input{
 width: 100%;
 border: none;
@@ -202,14 +208,14 @@ border: none;
 .banner form .search-icon i{
 position: absolute;
 content: "";
-left: 11px;
+left: 19px;
 top: 33%;
 font-size: 25px;
 }
 .banner form .search-icon #cancle{
 	position: absolute;
 content: "";
-left: 88%;
+left: 87%;
 top: 33%;
 font-size: 25px;
 }
