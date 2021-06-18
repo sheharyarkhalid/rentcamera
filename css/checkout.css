@@ -1,0 +1,279 @@
+*{
+ -web-kit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing:border-box;
+padding:0px;
+margin:0px;
+font-family: 'Source Sans Pro', helvetica, sans-serif;
+}
+
+
+body{
+  float: left;
+  width: 100%;
+  margin:0px;
+}
+.container{
+  max-width: 1170px;
+  margin: 0px auto;
+}
+
+.header-bar{
+display: flex;
+justify-content: space-between;
+align-items: center;
+  /*  transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    transition-property: color, background-color, border-bottom;
+    transform: translateZ(0px);*/
+    color: rgb(33, 34, 48);
+    border-bottom: 1px solid rgb(217, 218, 225);
+ padding: 13px 15px;
+     color: rgb(33, 34, 48);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 5%) 0px 0px 20px;
+margin-bottom: 45px;
+}
+
+
+.search form{
+
+  position: relative;
+}
+.search form input{
+
+  border-radius: 50px;
+  border-color: black;
+    padding: 3px 0px 3px 28px;
+    outline: none;
+}
+.search form i{
+  position: absolute;
+  content: "";
+  left: 8px;
+    top: 5px;
+
+}
+
+.header-bar .logo a img{
+width: 160px;
+}
+
+
+
+.header-bar .nav-bar a{
+padding: 8px 11px;
+border: 2px solid #dbd5d5;
+color: #252525;
+border-radius: 2px;
+transition:all 0.5s ease;
+
+}
+
+.header-bar .nav-bar a:hover{
+  color: red;
+  border-color: red;
+      -ms-transform: scale(9);
+  -webkit-transform: scale(1.9); 
+  transform: scale(1.9); 
+  transition:all 0.5s ease;
+}
+.checkout-body{
+float: left;
+width: 100%;
+}
+.checkout-body .container>span{
+float: left;
+width: 100%;
+font-size: 30px;
+    color: #333;
+    font-family: 'Gotham SSm A', 'Gotham SSm B';
+    font-weight: 400;
+margin-bottom: 30px;
+}
+.checkout{
+  display: flex;
+  justify-content: space-between;
+width: 100%;
+margin:0px -20px; 
+}
+.checkout .main{
+  width: 65%;
+padding: 0px 20px;
+}
+.checkout .product{
+float: left;
+  width: 100%;
+border-bottom: 2px solid #8080802e;
+padding-bottom: 16px;
+margin-bottom: 20px;
+
+}
+.checkout .product .product-detail{
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+.checkout .product .product-detail figure{
+width: 55%;
+border-right: 2px solid dimgray;
+display: flex;
+justify-content: space-between;
+}
+.checkout .product .product-detail figure img{
+width:35%;
+}
+.checkout .product .product-detail figure figcaption{
+width:65%;
+padding: 0px 10px;
+font-size: 15px;
+    color: #333;
+    font-family: 'Gotham SSm A', 'Gotham SSm B';
+    font-weight: 600;
+}
+.checkout .product .product-detail .quantity{
+width: 20%;
+border-right: 2px solid dimgray;
+}
+
+.checkout .product .product-detail .quantity form{
+width: 100%;
+text-align: center;
+padding:0px 25px;
+}
+.checkout .product .product-detail .quantity form label{
+width: 100%;
+margin-bottom: 15px;
+display: block;
+}
+.checkout .product .product-detail .quantity form input{
+width: 100%;
+text-align: center;
+}
+.checkout .product .product-detail .price{
+width: 25%;
+border-right: 2px solid dimgray;
+}
+.checkout .product .product-detail .price label{
+  display: block;
+width: 100%;
+text-align: center;
+font-size: 22px;
+padding-bottom: 15px; 
+}
+.checkout .product .product-detail .price strong{
+  display: block;
+width: 100%;
+text-align: center;
+font-size: 22px;
+padding-bottom: 15px;
+}
+.checkout .checkout-info{
+  width: 40%;
+  padding:0px 20px;
+}
+.checkout .checkout-info .charges{
+float: left;
+width: 100%;
+}
+
+.checkout .checkout-info .charges .price{
+    padding: 15px 15px;
+    background: #ce2e2e;
+    color: #fff;
+float: left;
+width: 100%;
+text-align: center;
+border-radius: 4px 4px 0px 0px;
+}
+.checkout .checkout-info .charges strong{
+font-size: 30px;
+display: block;
+width: 100%;
+}
+.checkout .checkout-info .charges span{
+font-size: 30px;
+display: inline-block;
+width: 100%;
+}
+
+.checkout .checkout-info .charges h6{
+display: inline;
+text-transform: uppercase;
+padding-left: 5px;
+}
+.checkout .checkout-info .charges h5{
+display: inline;
+text-transform: uppercase;
+padding-left: 5px;
+}
+
+
+.checkout .checkout-info .charges .dates{
+
+/*float: left;
+width: 100%;*/
+background: #eee;
+border-radius: 0px 0px 4px 4px;
+
+display: flex;
+width: 100%;
+font-family: 'Open Sans', sans-serif;
+justify-content: center;
+color: rgb(255, 255, 255);
+padding: 20px 0px;
+}
+
+.dates form{
+display: flex;
+width: 100%;
+font-family: 'Open Sans', sans-serif;
+justify-content: center;
+color: rgb(255, 255, 255);
+padding: 20px 0px;
+}
+.dates  .search-icon{
+    display: inline-block;
+    width: 48%;
+  position: relative;
+  padding: 0px 5px;
+}
+
+.dates input{
+width: 100%;
+border: none;
+    padding: 12px 0px 12px 0px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 20px;
+    outline: none;
+    height: 60px;
+    border-radius: 3px;
+    background-color: rgb(109, 108, 121);
+    padding-left: 20px;
+font-weight: 600;
+}
+
+.dates .search-icon #cancle{
+position: absolute;
+content: "";
+left: 80%;
+top: 28%;
+font-size: 25px;
+}
+.checkout-button{
+width: 100%;
+float: left;
+}
+.checkout-button button{
+border: none;
+color: white;
+font-size: 20px;
+width: 100%;
+border-radius: 4px;
+padding: 15px 0px;
+background: #ce2e2e;
+cursor: pointer;
+padding-top: 20px;
+margin-top: 20px;
+}

@@ -149,3 +149,21 @@ margin-top: 15px;
  .our-latest-product .list ul li .main .figcaption a i{
 	padding-right: 9px;
 }
+
+/*RESPONSIVE*/
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/*mobile rotation*/
+@media (max-width: 767px) {
+
+
+}
+
+/*mobile*/
+@media (max-width: 540px) { 
+  
+}

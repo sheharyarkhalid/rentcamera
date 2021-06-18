@@ -201,9 +201,10 @@ border: none;
     outline: none;
     height: 60px;
     border-radius: 10px 0px 0px 10px;
-    background-color: rgba(130, 126, 190, 0.32);
+    /*background-color: rgba(130, 126, 190, 0.32);*/
+    background-color: rgba(130, 126, 190, 0.53);
     padding-left: 55px;
-
+font-weight: 600;
 }
 .banner form .search-icon i{
 position: absolute;
