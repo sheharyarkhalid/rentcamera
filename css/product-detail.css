@@ -297,7 +297,7 @@ border-radius: 5px;
 }
 
 #produt-detail-extra .main .cart-part .cart-box button{
-background: red;
+background: #c30d0d;
 width: 26%;
 font-size: 18px;
 border-radius: 5px;
@@ -306,7 +306,10 @@ border: none;
 margin: 0px 5px;
 padding: 12px 0px;
 }
-
+#produt-detail-extra .main .cart-part .cart-box button a{
+text-decoration:none ;
+color: white;
+}
 
  .our-latest-product{
 float: left;
