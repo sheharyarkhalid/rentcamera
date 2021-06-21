@@ -284,3 +284,21 @@ padding: 0px 15px;
 	padding: 4px 4px 1px 4px;
 bottom: 20px;
 }
+
+/*RESPONSIVE*/
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/*mobile rotation*/
+@media (max-width: 767px) {
+
+
+}
+
+/*mobile*/
+@media (max-width: 540px) { 
+  
+}

@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
 <body>
 
 <section class="dashboard">
-   <section class="side_bar" id="side-bar">
-  <strong>Dashboard</strong>
-   </section>
+  
 
-   <section class="content" id="content">
-    <div class="content-body">
+   <section class="content">
+    
+       <section class="side_bar">
+              <a class="closebtn sidebar-btn"><i class="fas fa-times" ></i></a>
+           <strong>Dashboard</strong>
+       </section>
+    
     <div class="header-bar">
     
-     <div class="responcive_btn" id="responcive">
-          <i class="fas fa-bars" onclick="show_sidebar()"></i>
-        </div>
-
-          <div class="responcive_btn" id="responcive_close">
-          <i class="fas fa-bars" onclick="close_sidebar()"></i>
-        </div>
+     <div class="sidebar-btn">
+          <i class="fas fa-bars"></i>
+      </div>
 
        <div class="logo">
          <a href="index.html"><img src="image/logo.png"></a>
@@ -33,38 +34,24 @@
     <div class="body">
 
     </div>
-  <div class="footer-bar">
+
+      <div class="footer-bar">
     
-       <div class="copyright">
-         <a> copyright</a>
+        <div class="copyright">
+           <a> copyright</a>
+        </div>
+ 
       </div>
-
-    </div>
-
    </section>
 
 </section>
 <script>
   
- function show_sidebar(){
+$('.sidebar-btn').click(function(){
 
- document.getElementById("content").style.width = "80%";
-    document.getElementById("responcive_close").style.display = "flex";
-    document.getElementById("side-bar").style.display = "block";
-     document.getElementById("responcive").style.display = "none";
+$('.side_bar').toggleClass('test');
+});
 
-} 
-//Function to Hide Popup
-function close_sidebar(){
-
-
- document.getElementById("content").style.width = "100%";
-  document.getElementById("responcive").style.display = "flex";
-    document.getElementById("responcive_close").style.display = "none";
-  document.getElementById("side-bar").style.display = "none";
-
-  
-}
 </script>
 
 <body>
