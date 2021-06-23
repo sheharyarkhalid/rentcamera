@@ -1,59 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-function dashboard(){
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
 
-  $("#dashboard_window").fadeIn();
- $("#dashboard_window").css({"visibility":"visible","display":"block"});
+<body>
 
-  $("#new_product").fadeOut();
- $("#new_product").css({"visibility":"hidden","display":"none"});
+<section class="dashboard">
+  
 
-    $("#message_window").fadeOut();
- $("#message_window").css({"visibility":"hidden","display":"none"});
-  }
+   <section class="content">
+    
+    <div class="header-bar">
 
-function add_new_product(){
-  $("#new_product").fadeIn();
- $("#new_product").css({"visibility":"visible","display":"block"});
+       <div class="logo">
+         <a href="index.html"><img src="../image/logo.png"></a>
+      </div>
 
-   $("#dashboard_window").fadeOut();
- $("#dashboard_window").css({"visibility":"hidden","display":"none"});
+    </div>
 
-  $("#message_window").fadeOut();
- $("#message_window").css({"visibility":"hidden","display":"none"});
-}
-function message_window(){
+    <div class="body">
+      <div class="container">
+          
+       <!-- dashboard window start-->
+       <div class="dashboard_window"> 
+             <div class="dashboard_form">  
+              <strong>Product Rental History:</strong>
+             <div class="list_selecter">   
+            <select class  ="form-control" name="state" id="maxRows">
 
-  $("#message_window").fadeIn();
- $("#message_window").css({"visibility":"visible","display":"block"});
+                         <option value="5000">Show ALL Rows</option>
+                         <option value="5">5</option>
+                         <option value="10">10</option>
+                         <option value="15">15</option>
+                         <option value="20">20</option>
+                         <option value="50">50</option>
+                         <option value="70">70</option>
+                         <option value="100">100</option>
+            </select>
+             </div>
+               <div class="show_product">                    
+                 <table id="table-id">
+          
+          <tr>
+            <th>Product Name</th>
+            <th>Renter Name</th>
+            <th>Vender Name</th>
+            <th>Price</th>
+            <th>Renting Date</th>
+            <th>Renterning Date</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+             
+        </table>
+        </div>
 
- $("#dashboard_window").fadeOut();
- $("#dashboard_window").css({"visibility":"hidden","display":"none"});
 
- $("#new_product").fadeIn();
- $("#new_product").css({"visibility":"hidden","display":"none"});
-}
+<!--        Start Pagination -->
+            <div class='pagination-container'>
+                <nav>
+            
+                  <ul class="pagination">
+            
+            <li data-page="prev" >
+                <span> < <span class="sr-only">(current)</span></span>
+            </li>
+                 
+            <li data-page="next" id="prev">
+               <span> > <span class="sr-only">(current)</span></span>
+            </li>
+                  </ul>
+            
+                </nav>
+            </div>
 
-function view_product_detail(){
-    $("#single_product_detail").fadeIn();
- $("#single_product_detail").css({"visibility":"visible","display":"block"});
-}
-function close_page(){
-    $("#single_product_detail").fadeIn();
- $("#single_product_detail").css({"visibility":"hidden","display":"none"});
-}
+</div> 
+<!--         End of pagination -->
 
-// Add active class to the current button (highlight it)
-var header = document.getElementById("change_active");
-var btns = header.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
- } 
+            </div>
+          </div>
+        <!-- dashboard window end --> 
 
-/*dashboard all products js start*/
+
+<script>
+  
+  /*dashboard all products js start*/
    getPagination('#table-id');
           
 function getPagination(table) {
@@ -197,4 +239,7 @@ $(function() {
 // yasser.mas2@gmail.com
 
 /*dashboard all products js end*/
+</script>
 
+<body>
+  </html>
