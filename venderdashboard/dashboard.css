@@ -200,15 +200,32 @@ background: #b50b0bbf;
  float: left;
  width: 100%;
 }
-.add_product_box .product_container form strong{
-  text-align: center;
-  width: 100%;
+ .back_button{
+display: flex;
+justify-content: center;
+width: 100%;
+padding: 0px 20px;
+margin-bottom: 8px;
+}
+ .back_button a{
+  color: #fff;
+  padding: 15px 0px;
+  font-size: 20px;
+ text-decoration: none;
+background: #b50b0bbf; 
+padding: 5px 5px;
+
+}
+.add_product_box .product_container form  strong{
   color: #fff;
   padding: 15px 0px;
   font-size: 25px;
-width: 100%;
-display: block;
+ float: left;
+ width: 100%;
+ text-align: center;
+
 }
+
 .add_product_box .product_container form .product_input_field{
  display: flex;
  text-align: center;
@@ -301,12 +318,32 @@ width: 100%;
 float: left;
 width: 100%;
 }
-.dashboard_window .dashboard_form strong{
-  width: 100%;
+.back_to_dashboard{
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+}
+.dashboard_window .dashboard_form > strong{
   color: #252525;
   font-size: 25px;
   float: left;
   margin-bottom: 20px;
+ width: 100%;
+}
+.dashboard_window .dashboard_form .back_to_dashboard > strong{
+  color: #252525;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.dashboard_window .dashboard_form .back_to_dashboard a{
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 20px;
+ text-decoration: none;
+padding: 5px 5px;
+background: #bb1e1ecf;
+border-radius: 2px;
 }
 .form-control{
 width: 20%;
@@ -654,6 +691,10 @@ padding-left: 15px;
   padding-left: 15px;
 }
 
+.dashboard_window .dashboard_form .back_to_dashboard a {
+  margin-right: 15px;
+}
+
 
 }
 
@@ -678,6 +719,10 @@ padding-left: 15px;
 }
 .message_main .message_box form input {
   width: 75%;
+}
+
+.dashboard_window .dashboard_form .back_to_dashboard a {
+  margin-right: 15px;
 }
 
 }
@@ -768,4 +813,10 @@ height: 100%;
   width: 100%;
   margin-left: 0px;
 }
+
+.dashboard_window .dashboard_form .back_to_dashboard > strong {
+  font-size: 16px;
+}
+
+
 }
