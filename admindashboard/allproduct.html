@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+<body>
+
+<section class="dashboard">
+  
+
+   <section class="content">
+    
+    <div class="header-bar">
+
+       <div class="logo">
+         <a href="index.html"><img src="../image/logo.png"></a>
+      </div>
+
+    </div>
+
+    <div class="body">
+      <div class="container">
+          
+       <!-- dashboard window start-->
+       <div class="dashboard_window"> 
+             <div class="dashboard_form"> 
+               <div class="back_to_dashboard"> 
+              <strong>All Product:</strong>
+               <a href="dashboard.html">Back to Dashboard</a>
+              </div>
+             <div class="list_selecter">   
+            <select class  ="form-control" name="state" id="maxRows">
+
+                         <option value="5000">Show ALL Rows</option>
+                         <option value="5">5</option>
+                         <option value="10">10</option>
+                         <option value="15">15</option>
+                         <option value="20">20</option>
+                         <option value="50">50</option>
+                         <option value="70">70</option>
+                         <option value="100">100</option>
+            </select>
+             </div>
+               <div class="show_product">                    
+                 <table id="table-id">
+          
+         <tr>
+            <th>Product Name</th>
+            <th>View Product</th>
+            <th>Edit Detail</th>
+            <th>Delete Product</th>
+
+
+          </tr>
+     
+            <tr>
+            <td></td>
+            <td><a onclick="view_product_detail()"><i class="fas fa-eye"></i></a></td>
+            <td><a onclick="edit_product()"><i class='fa fa-edit'></i></a></td>
+            <td><a><i class="fas fa-trash-alt"></i></a></td>
+          </tr> 
+             
+        </table>
+        </div>
+
+
+<!--        Start Pagination -->
+            <div class='pagination-container'>
+                <nav>
+            
+                  <ul class="pagination">
+            
+            <li data-page="prev" >
+                <span> < <span class="sr-only">(current)</span></span>
+            </li>
+                 
+            <li data-page="next" id="prev">
+               <span> > <span class="sr-only">(current)</span></span>
+            </li>
+                  </ul>
+            
+                </nav>
+            </div>
+
+</div> 
+<!--         End of pagination -->
+
+            </div>
+          </div>
+        <!-- dashboard window end --> 
+
+
+
+ <section class="single_product_detail" id="single_product_detail">
+      <div class="container">
+      
+       <div class="view_product">
+              <div class="cancle_button" onclick="close_page()"><i class="fas fa-times"></i></div>  
+          <h1>Product Detail</h1>    
+    <section id="produt-detail">
+        <figure><img src="../image/new-one.jpg"></figure>
+        
+        <div class="detail">
+          <strong>Rent a Aputure LS 600d Pro Light Storm Daylight LED Light</strong>
+          
+           <div class="price-box">
+             
+             <div class="price"><small>Price Per Day</small><p>$50</p></div>
+             <div class="price"><small>Availabel date</small><p>$50</p></div>
+             <div class="price"><small>Pick Up Location </small><p>$50</p></div>
+
+           </div>
+
+       </div>
+      
+  </section>
+      <div class="pro_discription">
+        <strong> Product Discription:</strong>
+        <p>An improvement over the original 600d, the LS 600d Pro Light Storm Daylight LED Light from Aputure offers expansive power, control options, and output comparable to a 1200W HMI, augmented by its 55° Hyper Reflector. The precision fixture has a solid
+            <span id="dots">....</span><span id="more"> 5600K color temperature with a high CRI/TLCI rating of 96 that is great for location shooting outdoors, or in areas dominated by other daylight-balanced fixtures such as HMIs. Besides power, control is a driving force in the design of the 600d Pro. The light also has a myriad of wireless control methods, such as the included 2.4 GHz remote, the Sidus Link mobile app, and the built-in wireless DMX control. It has four dimming curves:
+            The LS 600d Pro Light Storm Daylight LED is available in V-Mount or Gold Mount.</span><button onclick="myFunction()" id="myBtn">Read more</button></p>
+       </div>
+       </div>
+
+      </div>
+  </section>
+
+
+  <div class="edit_product" id="edit_detail">
+      <div class="container"> 
+          <div class="add_product_box">
+            <div class="product_container">
+             <div class="product_form"> 
+              <div class="cancle_edit_button" onclick="close_edit_page()"><i class="fas fa-times"></i></div>   
+              <form>
+                  <strong>Edit Product</strong> 
+                  <div class="product_input_field">
+                   <div class="inner_field"> 
+                  <input type="text" placeholder="Product Name"></input> 
+                  <input type="text" placeholder="Product Discription"></input>
+                  <input type="number" placeholder="Price Per Day"></input>
+                  <input type="address" placeholder="Address"></input>
+                   <input type="text" placeholder="Modal Number"></input>
+                   <input type="address" placeholder="Pick Up location"></input>
+                  </div>
+                  <div class="inner_field">
+                  <input type="text" placeholder="company Name"></input> 
+                  <select>
+                      <option value="category" disabled>Select Category</option>
+                      <option value="category">Select Category</option>
+                 </select>
+                  <input type="text" placeholder="City"></input>
+                  <input type="date" placeholder="Date"></input>
+                  <div class="checkbox">
+                  <label>Available </label>
+                  <input type="checkbox" placeholder="City"></input>
+                  </div>
+                  <input type="file" name="fileToUpload" id="picture"  class="select_product_img">
+              </div>
+                  </div>
+                  <div class="submit_button">
+                  <button type="submit">update Product</button>   
+                  </div>
+              </form>
+            </div>
+            </div>
+          </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+<script>
+  
+function view_product_detail(){
+    $("#single_product_detail").fadeIn();
+ $("#single_product_detail").css({"visibility":"visible","display":"block"});
+
+ $("#edit_detail").fadeOut();
+ $("#edit_detail").css({"visibility":"hidden","display":"none"});
+}
+function edit_product(){
+    $("#edit_detail").fadeIn();
+ $("#edit_detail").css({"visibility":"visible","display":"block"});
+
+ $("#single_product_detail").fadeOut();
+ $("#single_product_detail").css({"visibility":"hidden","display":"none"});
+}
+function close_page(){
+    $("#single_product_detail").fadeIn();
+ $("#single_product_detail").css({"visibility":"hidden","display":"none"});
+}
+function close_edit_page(){
+    $("#edit_detail").fadeIn();
+ $("#edit_detail").css({"visibility":"hidden","display":"none"});
+}
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+  /*dashboard all products js start*/
+   getPagination('#table-id');
+          
+function getPagination(table) {
+  var lastPage = 1;
+
+  $('#maxRows')
+    .on('change', function(evt) {
+      //$('.paginationprev').html('');            // reset pagination
+
+     lastPage = 1;
+      $('.pagination')
+        .find('li')
+        .slice(1, -1)
+        .remove();
+      var trnum = 0; // reset tr counter
+      var maxRows = parseInt($(this).val()); // get Max Rows from select option
+
+      if (maxRows == 5000) {
+        $('.pagination').hide();
+      } else {
+        $('.pagination').show();
+      }
+
+      var totalRows = $(table + ' tbody tr').length; // numbers of rows
+      $(table + ' tr:gt(0)').each(function() {
+        // each TR in  table and not the header
+        trnum++; // Start Counter
+        if (trnum > maxRows) {
+          // if tr number gt maxRows
+
+          $(this).hide(); // fade it out
+        }
+        if (trnum <= maxRows) {
+          $(this).show();
+        } // else fade in Important in case if it ..
+      }); //  was fade out to fade it in
+      if (totalRows > maxRows) {
+        // if tr total rows gt max rows option
+        var pagenum = Math.ceil(totalRows / maxRows); // ceil total(rows/maxrows) to get ..
+        //  numbers of pages
+        for (var i = 1; i <= pagenum; ) {
+          // for each page append pagination li
+          $('.pagination #prev')
+            .before(
+              '<li data-page="' +
+                i +
+                '">\
+                  <span>' +
+                i++ +
+                '<span class="sr-only">(current)</span></span>\
+                </li>'
+            )
+            .show();
+        } // end for i
+      } // end if row count > max rows
+      $('.pagination [data-page="1"]').addClass('active'); // add active class to the first li
+      $('.pagination li').on('click', function(evt) {
+        // on click each page
+        evt.stopImmediatePropagation();
+        evt.preventDefault();
+        var pageNum = $(this).attr('data-page'); // get it's number
+
+        var maxRows = parseInt($('#maxRows').val()); // get Max Rows from select option
+
+        if (pageNum == 'prev') {
+          if (lastPage == 1) {
+            return;
+          }
+          pageNum = --lastPage;
+        }
+        if (pageNum == 'next') {
+          if (lastPage == $('.pagination li').length - 2) {
+            return;
+          }
+          pageNum = ++lastPage;
+        }
+
+        lastPage = pageNum;
+        var trIndex = 0; // reset tr counter
+        $('.pagination li').removeClass('active'); // remove active class from all li
+        $('.pagination [data-page="' + lastPage + '"]').addClass('active'); // add active class to the clicked
+        // $(this).addClass('active');          // add active class to the clicked
+      limitPagging();
+        $(table + ' tr:gt(0)').each(function() {
+          // each tr in table not the header
+          trIndex++; // tr index counter
+          // if tr index gt maxRows*pageNum or lt maxRows*pageNum-maxRows fade if out
+          if (
+            trIndex > maxRows * pageNum ||
+            trIndex <= maxRows * pageNum - maxRows
+          ) {
+            $(this).hide();
+          } else {
+            $(this).show();
+          } //else fade in
+        }); // end of for each tr in table
+      }); // end of on click pagination list
+    limitPagging();
+    })
+    .val(5)
+    .change();
+
+  // end of on select change
+
+  // END OF PAGINATION
+}
+
+function limitPagging(){
+  // alert($('.pagination li').length)
+
+  if($('.pagination li').length > 7 ){
+      if( $('.pagination li.active').attr('data-page') <= 3 ){
+      $('.pagination li:gt(5)').hide();
+      $('.pagination li:lt(5)').show();
+      $('.pagination [data-page="next"]').show();
+    }if ($('.pagination li.active').attr('data-page') > 3){
+      $('.pagination li:gt(0)').hide();
+      $('.pagination [data-page="next"]').show();
+      for( let i = ( parseInt($('.pagination li.active').attr('data-page'))  -2 )  ; i <= ( parseInt($('.pagination li.active').attr('data-page'))  + 2 ) ; i++ ){
+        $('.pagination [data-page="'+i+'"]').show();
+
+      }
+
+    }
+  }
+}
+
+$(function() {
+  // Just to append id number for each row
+  $('table tr:eq(0)').prepend('<th> ID </th>');
+
+  var id = 0;
+
+  $('table tr:gt(0)').each(function() {
+    id++;
+    $(this).prepend('<td>' + id + '</td>');
+  });
+});
+
+//  Developed By Yasser Mas
+// yasser.mas2@gmail.com
+
+/*dashboard all products js end*/
+</script>
+
+<body>
+  </html>

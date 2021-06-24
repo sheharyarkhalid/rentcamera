@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+<body>
+
+<section class="dashboard">
+  
+
+   <section class="content">
+    
+       <section class="side_bar">
+              <a class="closebtn sidebar-btn"><i class="fas fa-times" ></i></a>
+
+           <div class="dashboard_buttons" id="change_active">
+               <a class="btn active" id="dashboard"><span onclick="Renting_history()">Renting History</span></a>
+               <a class="btn"><span onclick="message_window()">Message Window</span></a>
+              
+           </div>
+       </section>
+    
+    <div class="header-bar">
+    
+     <div class="sidebar-btn">
+          <i class="fas fa-bars"></i>
+      </div>
+
+       <div class="logo">
+         <a href="index.html"><img src="../image/logo.png"></a>
+      </div>
+
+    </div>
+
+    <div class="body">
+      <div class="container">
+          
+       <!-- dashboard window start-->
+       <div class="dashboard_window" id="dashboard_window"> 
+             <div class="dashboard_form">  
+              <strong>All Renting Product:</strong>
+           <div class="list_selecter">            
+            <select class  ="form-control" name="state" id="maxRows">
+
+                         <option value="5000">Show ALL Rows</option>
+                         <option value="5">5</option>
+                         <option value="10">10</option>
+                         <option value="15">15</option>
+                         <option value="20">20</option>
+                         <option value="50">50</option>
+                         <option value="70">70</option>
+                         <option value="100">100</option>
+            </select>
+           </div>
+            <div class="show_product">          
+        <table id="table-id">
+          <tr>
+            <th>Product Name</th>
+            <th>Renter Name</th>
+            <th>Vender Name</th>
+            <th>Price</th>
+            <th>Renting Date</th>
+            <th>Renterning Date</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>  
+        </table>
+
+        </div>
+
+<!--        Start Pagination -->
+            <div class='pagination-container' >
+                <nav>
+            
+                  <ul class="pagination">
+            
+            <li data-page="prev" >
+                <span> < <span class="sr-only">(current)</span></span>
+            </li>
+                 
+            <li data-page="next" id="prev">
+               <span> > <span class="sr-only">(current)</span></span>
+            </li>
+                  </ul>
+            
+                </nav>
+            </div>
+
+</div> 
+<!--         End of pagination -->
+
+            </div>
+          </div>
+        <!-- dashboard window end --> 
+
+         <section class="message_window" id="message_window">
+           <div class="container">
+             <div class="message_main"> 
+             
+              <div class="client_list"> 
+              <div class="ul_client_list">    
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+
+               <div class="single_client">
+                <figure> <img src="../image/img_avatar.png"></figure>
+               <span>Danish akhtr</span>
+               </div>
+              
+             </div>
+              </div>
+
+             <div class="message_box">
+              <div class="message_ul">
+                  <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div>
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div>
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div> 
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div>
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                    <input placeholder="send message.." name="msg" readonly></input>
+                    </div>
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div> 
+
+                     <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                    <div class="send">
+                   <input placeholder="send message.." name="msg" readonly></input>
+                    </div>
+                    <div class="receive">
+                   <input placeholder="received message.." name="msg" readonly></input>
+                    </div>
+                   
+
+                 </div>   
+                <form action="/action_page.php" class="form-container">
+                    <input placeholder="Type message.." name="msg" required></input>
+                  <button type="submit" class="btn">Send</button>
+                 </form>
+             </div>
+
+           </div>
+
+         </section>
+
+</div>
+
+      <div class="footer-bar">
+    
+        <div class="copyright">
+           <a> copyright</a>
+        </div>
+ 
+      </div>
+   </section>
+
+</section>
+
+
+  
+
+<script>
+  
+$('.sidebar-btn').click(function(){
+
+$('.side_bar').toggleClass('test');
+});
+
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+</script>
+
+<script src="renterdashboard.js"></script>
+
+<body>
+  </html>
