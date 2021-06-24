@@ -818,5 +818,15 @@ height: 100%;
   font-size: 16px;
 }
 
+#produt-detail {
+  flex-direction: column;
+}
+#produt-detail figure {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#produt-detail .detail .price-box {
+  flex-direction: column;
+}
 
 }
